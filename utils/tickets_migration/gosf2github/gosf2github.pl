@@ -170,7 +170,7 @@ foreach my $ticket (@tickets) {
    	     	"created_at" => cvt_time($ticket->{created_date}),    ## check
    	     	"assignee" => $assignee,
    	     	#"milestone" => 1,  # todo
-   	     	"closed" => $ticket->{status} =~ /closed/ ? JSON::true : JSON::false ,
+   	     	"closed" => $ticket->{status} =~ /closed|resolved|rejected/ ? JSON::true : JSON::false ,
    	     	"labels" => \@labels,
    	 	};
 	}
@@ -182,7 +182,7 @@ foreach my $ticket (@tickets) {
    	     	"body" => $body,
    	     	"created_at" => cvt_time($ticket->{created_date}),    ## check
    	     	#"milestone" => 1,  # todo
-   	     	"closed" => $ticket->{status} =~ /closed/ ? JSON::true : JSON::false ,
+   	     	"closed" => $ticket->{status} =~ /closed|resolved|rejected/ ? JSON::true : JSON::false ,
    	     	"labels" => \@labels,
    	 	};
 	}
