@@ -165,7 +165,7 @@ foreach my $ticket (@tickets) {
 	if($assignee) {
 	    $issue =
    	 	{
-   	     	"title" => $ticket->{summary},
+   	     	"title" => $ticket->{summary}." (SF#$num)",
    	     	"body" => $body,
    	     	"created_at" => cvt_time($ticket->{created_date}),    ## check
    	     	"assignee" => $assignee,
@@ -178,7 +178,7 @@ foreach my $ticket (@tickets) {
 	{
 		$issue =
    	 	{
-   	     	"title" => $ticket->{summary},
+   	     	"title" => $ticket->{summary}." (SF#$num)",
    	     	"body" => $body,
    	     	"created_at" => cvt_time($ticket->{created_date}),    ## check
    	     	#"milestone" => 1,  # todo
