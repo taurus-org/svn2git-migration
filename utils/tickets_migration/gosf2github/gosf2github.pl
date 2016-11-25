@@ -191,7 +191,7 @@ foreach my $ticket (@tickets) {
         my $comment =
         {
             "created_at" => cvt_time($post->{timestamp}),
-            "body" => $post->{text}."\n\nOriginal comment by: ".map_user($post->{author})." (http://sourceforge.net/u/$post->{author})",
+            "body" => $post->{text}."\n\nOriginal comment by: ".map_user($post->{author})." (http://sf.net/u/$post->{author})",
         };
         push(@comments, $comment);
     }
